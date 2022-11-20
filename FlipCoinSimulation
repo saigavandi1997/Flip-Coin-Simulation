@@ -1,21 +1,18 @@
-!/bin/bash -x
-#FLIP=$(($(($RANDOM%10)%2))
-#if [ $FLIP -eq 1 ];then
- #   echo "heads"
-#else
- #   echo "tails"
-#fi
-Result=$((RANDOM%2))
-if [[ ${Result} -eq 0 ]]; then
-    echo HEADS
-elif [[ ${Result} -eq 1 ]]; then
-    echo TAILS
+#!/bin/bash 
+headcount=0
+tailcount=0
+count=0  
+FLIP=$(($(($RANDOM%10))%2))
+if [ $FLIP -eq 1 ];then
+    echo "heads"
+else
+    echo "tails"
 fi
-echo "Result" ${#Result[HEADS]}
-echo "Result" ${#Result[TAILS]}
-echo "Number of TAILS" ${#Result[@]}
-echo "Number of Heads" ${#Result[@]}
+for (( count=1; count<10; count++ ))
+do
 
-
-
+headcount=headcount+1;
+tailcount=tailcount+1;
+done
+echo -n "$count"  
 
