@@ -1,18 +1,22 @@
 #!/bin/bash 
 headcount=0
 tailcount=0
-count=0  
+#count=1  
 FLIP=$(($(($RANDOM%10))%2))
 if [ $FLIP -eq 1 ];then
     echo "heads"
 else
     echo "tails"
 fi
-for (( count=1; count<10; count++ ))
+for (( count=1; count<=10; count++ ))
 do
-
-headcount=headcount+1;
-tailcount=tailcount+1;
+headcount=headcount+1
+tailcount=tailcount+1
+echo $headcount 
+echo $tailcount
+echo $count
 done
-echo -n "$count"  
+  
+
+
 
