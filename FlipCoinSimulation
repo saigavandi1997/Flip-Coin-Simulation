@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash -x 
 headcount=0
 tailcount=0
 #count=1  
@@ -16,6 +16,13 @@ echo $headcount
 echo $tailcount
 echo $count
 done
+while [ $headcount<21 OR $tailcount<21 ]
+do
+echo $headcount
+echo $tailcount
+echo -n $count
+done
+
   
 
 
